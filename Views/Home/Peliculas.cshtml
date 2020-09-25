@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Unidad2Actividad4.Models.Pelicula>
+@{
+    Layout = "_Layout";
+}
+<div id="pelis">
+    @foreach (var pelicula in Model)
+    {
+    <div>
+        <a class="imgPelicula" href="~/@pelicula.Nombre.Replace(" ", "_")">
+            <img src="~/images/portadas/@(pelicula.Id)_p.jpg" alt="@pelicula.Nombre">
+        </a>
+        <div class="nombrePelicula">
+            <p>@pelicula.Nombre</p>
+        </div>
+    </div>
+    }
+</div>
+
+
